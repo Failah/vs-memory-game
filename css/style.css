@@ -10,6 +10,21 @@ body {
     font-family: sans-serif;
 }
 
-img {
+/* img {
     width: 100%;
+} */
+
+
+/* utilities */
+
+
+
+
+/* contents */
+
+#grid {
+    max-width: 60vw;
 }
+
+
+/* effects */

@@ -32,6 +32,7 @@ function generateGrid() {
         let card = document.createElement('img');
         card.setAttribute('src', 'img/blank.png');
         card.setAttribute('data-id', i);
+        card.classList.add('img-fluid', 'col-3');
 
         // card.addEventListener('click', revealCard)
 
