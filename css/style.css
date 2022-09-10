@@ -8,11 +8,8 @@
 
 body {
     font-family: sans-serif;
+    background-color: bisque;
 }
-
-/* img {
-    width: 100%;
-} */
 
 
 /* utilities */
@@ -22,8 +19,18 @@ body {
 
 /* contents */
 
+#score-bar {
+    background-color: tomato;
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
 #grid {
-    max-width: 60vw;
+    max-width: 800px;
+}
+
+#grid img {
+    width: 190px;
 }
 
 
