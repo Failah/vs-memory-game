@@ -31,6 +31,7 @@ let cardsMatched = [];
 
 const grid = document.getElementById('grid');
 
+const score = document.getElementById('score-number');
 
 
 // generate a 4x4 images grid
@@ -78,6 +79,7 @@ function checkMatch() {
     if (cardsSelectedByUser[0] === cardsSelectedByUser[1]) {
 
         console.log('You found 2 matching cards!');
+        console.log('');
 
         alert('You found 2 matching cards!');
 
@@ -92,6 +94,7 @@ function checkMatch() {
         selectedCards[secondSelect].setAttribute('src', 'img/blank.png');
 
         console.log('You picked 2 non-matching cards! Try again!');
+        console.log('');
 
         alert('You picked 2 non-matching cards! Try again!');
     }
@@ -100,5 +103,12 @@ function checkMatch() {
     cardsSelectedByUser = [];
     cardsSelectedByUserFlip = [];
 
+    // this will show the current score by checking the images in the cardsMatched array
+    score.textContent = cardsMatched.length;
 
+    // this will check if we guessed all the cards (we won the game)
+    if (cardsMatched.length === cards.length / 2) {
+        score.textContent = 'Congratulations, you won!';
+        console.log('Congratulations, you won!');
+    }
 }
