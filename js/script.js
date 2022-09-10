@@ -1,8 +1,6 @@
 console.log('JS OK!');
 
 const cards = [
-    { name: 'blank', img: 'img/blank.png' },
-    { name: 'blank', img: 'img/blank.png' },
     { name: 'cheeseburger', img: 'img/cheeseburger.png' },
     { name: 'cheeseburger', img: 'img/cheeseburger.png' },
     { name: 'fries', img: 'img/fries.png' },
@@ -14,9 +12,7 @@ const cards = [
     { name: 'milkshake', img: 'img/milkshake.png' },
     { name: 'milkshake', img: 'img/milkshake.png' },
     { name: 'pizza', img: 'img/pizza.png' },
-    { name: 'pizza', img: 'img/pizza.png' },
-    { name: 'white', img: 'img/white.png' },
-    { name: 'white', img: 'img/white.png' }
+    { name: 'pizza', img: 'img/pizza.png' }
 ]
 
 // arrays for images matching
@@ -25,6 +21,9 @@ let cardsSelectedByUser = [];
 let cardsSelectedByUserFlip = [];
 
 let cardsMatched = [];
+
+// randomize cards order in the starting array
+cards.sort(() => 0.5 - Math.random());
 
 
 // variables
@@ -65,7 +64,7 @@ function revealCard() {
     this.setAttribute('src', cards[cardFlip].img);
 
     if (cardsSelectedByUser.length === 2) {
-        setTimeout(checkMatch, 400);
+        setTimeout(checkMatch, 200);
     }
 }
 
