@@ -20,11 +20,11 @@ const cards = [
 ]
 
 // arrays for images matching
-const cardsSelectedByUser = [];
+let cardsSelectedByUser = [];
 
-const cardsSelectedByUserFlip = [];
+let cardsSelectedByUserFlip = [];
 
-const cardsMatched = [];
+let cardsMatched = [];
 
 
 // variables
