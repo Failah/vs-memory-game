@@ -37,6 +37,22 @@ const errors = document.getElementById('errors-number');
 let errorsNumber = 0;
 
 
+// asks user name
+
+const playerName = document.getElementById('player-name');
+
+let playerNameInput = prompt('Insert your name! (max 10 letters)');
+
+while (playerNameInput.length > 10) {
+    alert('That name is too long!');
+    playerNameInput = prompt('Insert your name! (max 10 letters)');
+}
+
+playerName.innerHTML = playerNameInput;
+
+
+
+
 // generate a 4x4 images grid
 generateGrid();
 
@@ -49,7 +65,7 @@ function generateGrid() {
         let card = document.createElement('img');
         card.setAttribute('src', 'img/blank.png');
         card.setAttribute('data-id', i);
-        card.classList.add('img-fluid', 'col-3');
+        card.classList.add('img-fluid', 'col-2');
 
         card.addEventListener('click', revealCard);
 
