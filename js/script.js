@@ -112,8 +112,12 @@ function checkMatch() {
         selectedCards[secondSelect].setAttribute('src', 'img/white.png');
 
         // matched images cannot be clicked again 
-        selectedCards[firstSelect].removeEventListener('click', revealCard)
-        selectedCards[secondSelect].removeEventListener('click', revealCard)
+        selectedCards[firstSelect].removeEventListener('click', revealCard);
+        selectedCards[secondSelect].removeEventListener('click', revealCard);
+
+        // fixes the cursor of mathed cards to "default" via CSS class
+        selectedCards[firstSelect].classList.add('vs-cursor-default');
+        selectedCards[secondSelect].classList.add('vs-cursor-default');
 
         // saves the matched card into a new array
         cardsMatched.push(cardsSelectedByUser);

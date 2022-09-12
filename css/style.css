@@ -37,5 +37,9 @@ body {
     padding-right: 0;
 }
 
+.vs-cursor-default {
+    cursor: default !important;
+}
+
 
 /* effects */
