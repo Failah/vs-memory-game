@@ -94,9 +94,15 @@ function checkMatch() {
     const firstSelect = cardsSelectedByUserFlip[0];
     const secondSelect = cardsSelectedByUserFlip[1];
 
-    // checks if the selected cards matches and if so replaces them with white img
-    if (cardsSelectedByUser[0] === cardsSelectedByUser[1]) {
+    // checks if you selected 2 times the same card
+    if (firstSelect == secondSelect) {
+        selectedCards[firstSelect].setAttribute('src', 'img/blank.png');
+        selectedCards[secondSelect].setAttribute('src', 'img/blank.png');
 
+        alert('You cannot choose the same card twice!');
+
+        // checks if the selected cards matches and if so replaces them with white img
+    } else if (cardsSelectedByUser[0] === cardsSelectedByUser[1]) {
         console.log('You found 2 matching cards!');
         console.log('');
 
