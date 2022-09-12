@@ -111,6 +111,10 @@ function checkMatch() {
         selectedCards[firstSelect].setAttribute('src', 'img/white.png');
         selectedCards[secondSelect].setAttribute('src', 'img/white.png');
 
+        // matched images cannot be clicked again 
+        selectedCards[firstSelect].removeEventListener('click', revealCard)
+        selectedCards[secondSelect].removeEventListener('click', revealCard)
+
         // saves the matched card into a new array
         cardsMatched.push(cardsSelectedByUser);
     } else {
