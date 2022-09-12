@@ -31,6 +31,9 @@ body {
 
 #grid img {
     width: 190px;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 

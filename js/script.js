@@ -32,6 +32,10 @@ const grid = document.getElementById('grid');
 
 const score = document.getElementById('score-number');
 
+const errors = document.getElementById('errors-number');
+
+let errorsNumber = 0;
+
 
 // generate a 4x4 images grid
 generateGrid();
@@ -96,6 +100,10 @@ function checkMatch() {
         console.log('');
 
         alert('You picked 2 non-matching cards! Try again!');
+
+        errorsNumber++;
+
+        errors.innerHTML = errorsNumber;
     }
 
     // we need to clear the storage array for choosen cards now
