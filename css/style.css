@@ -28,6 +28,7 @@ body {
 #grid {
     max-width: 856px;
     column-gap: 1.5rem;
+    row-gap: 1.5rem;
 }
 
 #grid img {
