@@ -108,14 +108,14 @@ function checkMatch() {
 
         alert('You found 2 matching cards!');
 
-        selectedCards[firstSelect].setAttribute('src', 'img/white.png');
-        selectedCards[secondSelect].setAttribute('src', 'img/white.png');
+        selectedCards[firstSelect].setAttribute('src', 'http://puu.sh/JnPES/77761dafab.png');
+        selectedCards[secondSelect].setAttribute('src', 'http://puu.sh/JnPES/77761dafab.png');
 
         // matched images cannot be clicked again 
         selectedCards[firstSelect].removeEventListener('click', revealCard);
         selectedCards[secondSelect].removeEventListener('click', revealCard);
 
-        // fixes the cursor of mathed cards to "default" via CSS class
+        // fixes the cursor of matched cards to "default" via CSS class
         selectedCards[firstSelect].classList.add('vs-cursor-default');
         selectedCards[secondSelect].classList.add('vs-cursor-default');
 
@@ -146,6 +146,6 @@ function checkMatch() {
     // this will check if we guessed all the cards (we won the game)
     if (cardsMatched.length === cards.length / 2) {
         score.textContent = 'Congratulations, you won!';
-        console.log('Congratulations, you won!');
+        console.log('Congratulations, you won! Score:');
     }
 }
