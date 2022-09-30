@@ -63,7 +63,7 @@ function generateGrid() {
     for (let i = 0; i < cards.length; i++) {
 
         let card = document.createElement('img');
-        card.setAttribute('src', 'img/blank.png');
+        card.setAttribute('src', 'http://puu.sh/JnPN0/d6f5d52871.jpg');
         card.setAttribute('data-id', i);
         card.classList.add('img-fluid', 'col-2');
 
@@ -96,12 +96,12 @@ function checkMatch() {
 
     // checks if you selected 2 times the same card
     if (firstSelect == secondSelect) {
-        selectedCards[firstSelect].setAttribute('src', 'img/blank.png');
-        selectedCards[secondSelect].setAttribute('src', 'img/blank.png');
+        selectedCards[firstSelect].setAttribute('src', 'http://puu.sh/JnPN0/d6f5d52871.jpg');
+        selectedCards[secondSelect].setAttribute('src', 'http://puu.sh/JnPN0/d6f5d52871.jpg');
 
         alert('You cannot choose the same card twice!');
 
-        // checks if the selected cards matches and if so replaces them with white img
+        // checks if the selected cards matches and if so replaces them with bisque img link
     } else if (cardsSelectedByUser[0] === cardsSelectedByUser[1]) {
         console.log('You found 2 matching cards!');
         console.log('');
@@ -123,8 +123,8 @@ function checkMatch() {
         cardsMatched.push(cardsSelectedByUser);
     } else {
         // if the cards do not match, this flips them back to original
-        selectedCards[firstSelect].setAttribute('src', 'img/blank.png');
-        selectedCards[secondSelect].setAttribute('src', 'img/blank.png');
+        selectedCards[firstSelect].setAttribute('src', 'http://puu.sh/JnPN0/d6f5d52871.jpg');
+        selectedCards[secondSelect].setAttribute('src', 'http://puu.sh/JnPN0/d6f5d52871.jpg');
 
         console.log('You picked 2 non-matching cards! Try again!');
         console.log('');
